@@ -3,6 +3,7 @@
 const express = require('express');
 const connectDB = require('./config/db');
 var cors = require('cors');
+const bodyParser = require("body-parser");
 
 // routes
 const books = require('./routes/api/books');
@@ -48,3 +49,4 @@ app.get("*", function (request, response) {
 });
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
+
